@@ -1,8 +1,10 @@
+/** @format */
+
 import { Telegraf } from "telegraf";
-import { telBot } from "../Config/config";
+require("dotenv").config();
+const { txUser, BOT_TOKEN } = process.env;
 
-
-const bot = new Telegraf(telBot);
+const bot = new Telegraf(BOT_TOKEN!);
 
 bot.start((ctx: any) => {
   ctx.reply(
@@ -10,13 +12,12 @@ bot.start((ctx: any) => {
   );
 });
 
-const notification = async (message: any) => {
+export const notification = async (message: any) => {
   console.log("\n\n Sending telegram notification ...");
-
   bot.telegram
-    .sendMessage("288307809", message, {
+    .sendMessage(`${txUser}`, message, {
       parse_mode: "HTML",
-      disable_web_page_preview: true
+      disable_web_page_preview: true,
     })
     .catch((err: any) => {
       console.log(
@@ -25,10 +26,6 @@ const notification = async (message: any) => {
       console.log("==============================");
       console.log(err);
     });
-
   console.log("Done");
 };
-
 bot.launch();
-
-export { notification };
