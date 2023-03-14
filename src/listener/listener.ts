@@ -17,7 +17,7 @@ export const ListeningEvents = async () => {
 
      value = (value / 1e6);
     console.log("Your data is:", to, value, event.transactionHash);
-    if (Number(value) >= 10) {
+    if (Number(value) >= 20000) {
       let message = `Flashloan transaction notification :`;
       message += `\n\ntxHash:https://etherscan.io/tx/${event.transactionHash}`;
       message += `\n\namount: ${value} USDC`;
