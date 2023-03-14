@@ -19,8 +19,7 @@ export const ListeningEvents = async () => {
 
   USDCContract.on(USDCfilterFrom, async (from, to, value, event) => {
 
-    // console.log(event);
-    // const myEvent = await provider.getTransaction(event.transactionHash);
+    console.log(event);
      value = (value / 1e6);
     console.log("Your data is:", to, value, event.transactionHash);
     if (Number(value) >= 10) {
