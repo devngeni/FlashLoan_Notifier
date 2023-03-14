@@ -17,16 +17,16 @@ export const ListeningEvents = async () => {
       event: { transactionHash: string }
     ) => {
       value = (value / 1e6).toFixed(2);
-      const message = await messageObject(
-        "USDC",
-        event.transactionHash,
-        value,
-        to
-      );
+      const message = messageObject("USDC", event.transactionHash, value, to);
 
       if (Number(value) >= 10) {
         await notification(message);
       }
     }
   );
+
+
+  //checking for Dai
+
+  
 };

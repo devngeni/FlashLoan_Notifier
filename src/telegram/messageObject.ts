@@ -6,7 +6,6 @@ export function messageObject(
   value: any,
   to: any
 ) {
-
   // Creating a message to send as a notification
   let message = `<b>${token}</b>`;
   message += `\n\n<b>TxHash</b>: https://etherscan.io/tx/${txHash}`;
