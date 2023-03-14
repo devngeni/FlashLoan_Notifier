@@ -1,5 +1,3 @@
-/** @format */
-
 require("dotenv").config();
 import { ethers } from "ethers";
 import { abi } from "../utils/abi";

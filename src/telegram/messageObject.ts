@@ -10,7 +10,7 @@ export function messageObject(
   let message = `<b>${token}</b>`;
   message += `\n\n<b>TxHash</b>: https://etherscan.io/tx/${txHash}`;
   message += `\n\n<b>Amount</b>: ${value}`;
-  message += `\n\n<b>To</b>: ${to}`;
+  message += `\n\n<b>To</b>: https://etherscan.io/address/${to}`;
 
   return message;
 }
