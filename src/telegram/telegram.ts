@@ -13,7 +13,7 @@ bot.start((ctx: any) => {
 });
 
 export const notification = async (message: any) => {
-  console.log("\n\n Sending telegram notification ...");
+  console.log("Sending telegram notification ...");
   bot.telegram
     .sendMessage(`${txUser}`, message, {
       parse_mode: "HTML",
@@ -21,7 +21,7 @@ export const notification = async (message: any) => {
     })
     .catch((err: any) => {
       console.log(
-        "\n\n Encountered an error while sending notification to the bot "
+        "Encountered an error while sending notification to the bot "
       );
       console.log("==============================");
       console.log(err);

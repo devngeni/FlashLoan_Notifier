@@ -23,7 +23,8 @@ export const USDCContract = new ethers.Contract(USDCAddress, abi, provider);
 //Dai contract instance
 export const DAIContract = new ethers.Contract(DaiAddress, abi, provider);
 
-
 //USDT contract instance
 export const USDTContract = new ethers.Contract(USDTAddress, abi, provider);
 
+//WETH contract instance
+export const WETHContract = new ethers.Contract(WETHAddress, abi, provider);
