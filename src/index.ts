@@ -1,4 +1,4 @@
-import { ListeningEvents } from "./stream/stream";
+import { ListeningEvents } from "./listener/listener";
 
 const main = async () => {
   await ListeningEvents();
