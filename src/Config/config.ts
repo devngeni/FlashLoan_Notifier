@@ -16,3 +16,5 @@ export const FlashLoanProviderAddress =
 export const provider = new ethers.providers.WebSocketProvider(WSS_URL!);
 
 export const USDCContract = new ethers.Contract(USDCAddress, abi, provider);
+
+export const WETHContract = new ethers.Contract(WETHAddress, abi, provider);
