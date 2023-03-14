@@ -32,7 +32,7 @@ export const ListeningEvents = async () => {
   const filterFromWETH = WETHContract.filters.Transfer(
     FlashLoanProviderAddress
   );
-  USDCContract.on(
+  WETHContract.on(
     filterFromWETH,
     async (
       from: any,
@@ -40,7 +40,7 @@ export const ListeningEvents = async () => {
       value: any,
       event: { transactionHash: string }
     ) => {
-      value = (value / 1e6).toFixed(2);
+      value = (value / 1e18).toFixed(2);
       const message = await messageObject(
         "WETH",
         event.transactionHash,
