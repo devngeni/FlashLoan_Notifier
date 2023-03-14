@@ -1,6 +1,8 @@
 import { Telegraf } from "telegraf";
+import { telBot } from "../Config/config";
 
-const bot = new Telegraf(process.env.BOT_TOKEN!);
+
+const bot = new Telegraf(telBot);
 
 bot.start((ctx: any) => {
   ctx.reply(
