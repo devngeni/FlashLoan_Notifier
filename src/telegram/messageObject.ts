@@ -1,7 +1,6 @@
 /** @format */
 
 export function messageObject(
-  header: string,
   token: string,
   txHash: string,
   value: any,
@@ -9,7 +8,7 @@ export function messageObject(
 ) {
   // Creating a message to send as a notification
   let message = `<b>FlashLoan Notifier</b>`;
-  message += `\n\n<b>${header}</b>`;
+  message += `\n\n<b>${token}</b>`;
   message += `\n\n<b>TxHash</b>: https://etherscan.io/tx/${txHash}`;
   message += `\n\n<b>Amount</b>: ${value} ${token}`;
   message += `\n\n<b>To</b>: https://etherscan.io/address/${to}`;
