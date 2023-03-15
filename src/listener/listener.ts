@@ -25,7 +25,6 @@ export const ListeningEvents = async () => {
       value = (value / 1e6).toFixed(2);
       const message = await messageObject(
         "USDC",
-        "USDC",
         event.transactionHash,
         value,
         to
@@ -49,7 +48,6 @@ export const ListeningEvents = async () => {
     ) => {
       value = (value / 1e18).toFixed(2);
       const message = await messageObject(
-        "DAI",
         "DAI",
         event.transactionHash,
         value,
@@ -77,7 +75,6 @@ export const ListeningEvents = async () => {
       value = (value / 1e6).toFixed(2);
       const message = await messageObject(
         "USDT",
-        "USDT",
         event.transactionHash,
         value,
         to
@@ -103,7 +100,6 @@ export const ListeningEvents = async () => {
     ) => {
       value = (value / 1e18).toFixed(2);
       const message = await messageObject(
-        "WETH",
         "WETH",
         event.transactionHash,
         value,

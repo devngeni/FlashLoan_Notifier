@@ -15,6 +15,7 @@ export const USDTAddress = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
 export const FlashLoanProviderAddress =
   "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640";
 
+
 export const provider = new ethers.providers.WebSocketProvider(WSS_URL!);
 
 //USDC contract instance
